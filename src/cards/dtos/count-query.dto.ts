@@ -1,6 +1,9 @@
-import { IsNumber, Max, Min } from 'class-validator';
+import { IsDefined, IsNumber, Max, Min } from 'class-validator';
 
 export class CountQueryDto {
+  @IsDefined({
+    message: 'count must be given',
+  })
   @IsNumber(
     {},
     {
